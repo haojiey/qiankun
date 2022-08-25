@@ -1,0 +1,18 @@
+{
+  "name": "qiankun",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "concurrently \"yarn start:main\" \"yarn start:app2\" \"yarn start:app3\"",
+    "start:main": "cd main && yarn dev",
+    "start:app2": "cd app-vue2 && yarn serve",
+    "start:app3": "cd app-vue3 && yarn serve"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^7.3.0"
+  }
+}
