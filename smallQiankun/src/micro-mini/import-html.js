@@ -5,11 +5,7 @@ export const importHTML = async(app) => {
     const template = document.createElement('div')
     template.innerHTML = text
 
-    // const html = await fetch(app.entry).then(res => res.text())
-
     const scripts = template.querySelectorAll('script')
-
-
 
     // 获取所有的script代码
     function getExternalScripts(){
@@ -37,10 +33,8 @@ export const importHTML = async(app) => {
         eval(script)
        })
        return module.exports
-
         //这种方式需要知道子应用暴露的名称 
         //return window['appVue2'],
-
     }
 
    return{

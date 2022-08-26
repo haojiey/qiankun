@@ -8,7 +8,13 @@ import {handleRouter} from './handle-router'
  export const getNextRouter = () => nextRouter;
 
 
+// hash路由 onhashchange
 
+// history路由为例
+// 1.监听路由变化
+// history
+// history.go history.back history.forward 使用popstate 事件 ： window.onpopstate
+// pushState replaceState 需要通过函数重写的方式进行劫持
 export const rewriteRouter = () => {
    
     window.addEventListener('popstate', () => {
